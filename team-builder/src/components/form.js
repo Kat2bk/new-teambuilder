@@ -19,6 +19,8 @@ export default function MemberForm(props) {
 
   function Submit(event) {
     event.PreventDefault();
+    props.data(formState);
+    setFormState({ name: "", email: "", position: "" });
   }
 
   return (
