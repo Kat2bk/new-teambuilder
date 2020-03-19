@@ -9,7 +9,7 @@ export default function MemberForm(props) {
     position: ""
   });
 
-  function onChange(event) {
+  function handleChange(event) {
     console.log(formState);
     setFormState({
       ...formState,
@@ -26,6 +26,14 @@ export default function MemberForm(props) {
   return (
     <form onSubmit={Submit}>
       <p>Enter your data:</p>
+      <label htmlFor="name">Name: </label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        onChange={handleChange}
+        value={formState.name}
+      />
     </form>
   );
 }
