@@ -3,7 +3,6 @@ import React, { useState } from "react";
 export default function MemberForm(props) {
   console.log("I am the props for form", props);
   const [formState, setFormState] = useState({
-    id: "",
     name: "",
     email: "",
     position: ""
@@ -34,6 +33,7 @@ export default function MemberForm(props) {
         onChange={handleChange}
         value={formState.name}
       />
+      <br />
       <label htmlFor="email">Email: </label>
       <input
         id="email"
@@ -42,6 +42,7 @@ export default function MemberForm(props) {
         onChange={handleChange}
         value={formState.email}
       />
+      <br />
       <label htmlFor="position">Position: </label>
       <input
         id="position"
@@ -50,6 +51,7 @@ export default function MemberForm(props) {
         onChange={handleChange}
         value={formState.position}
       />
+      <br />
       <button type="submit">Submit</button>
     </form>
   );
