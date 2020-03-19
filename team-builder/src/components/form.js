@@ -8,4 +8,22 @@ export default function MemberForm(props) {
     email: "",
     position: ""
   });
+
+  function onChange(event) {
+    console.log(formState);
+    setFormState({
+      ...formState,
+      [event.target.name]: event.target.value
+    });
+  }
+
+  function Submit(event) {
+    event.PreventDefault();
+  }
+
+  return (
+    <form onSubmit={Submit}>
+      <p>Enter your data:</p>
+    </form>
+  );
 }
