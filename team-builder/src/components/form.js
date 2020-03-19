@@ -34,6 +34,23 @@ export default function MemberForm(props) {
         onChange={handleChange}
         value={formState.name}
       />
+      <label htmlFor="email">Email: </label>
+      <input
+        id="email"
+        type="text"
+        name="email"
+        onChange={handleChange}
+        value={formState.email}
+      />
+      <label htmlFor="position">Position: </label>
+      <input
+        id="position"
+        type="text"
+        name="position"
+        onChange={handleChange}
+        value={formState.position}
+      />
+      <button type="submit">Submit</button>
     </form>
   );
 }
