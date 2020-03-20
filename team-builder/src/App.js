@@ -17,6 +17,8 @@ function App() {
     setMembers([...members, member]);
   };
 
+  const [memberToEdit, setMemberToEdit] = useState()
+
   return (
     <div className="App">
       <h1>Teammate List</h1>

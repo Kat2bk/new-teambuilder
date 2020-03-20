@@ -8,6 +8,9 @@ export default function Members(props) {
           <h2>Name: {member.name}</h2>
           <h2>Email: {member.email}</h2>
           <h2>Position: {member.position}</h2>
+          <button onClick={() => props.memberToEdit(props.member)}>
+            Edit Member
+          </button>
         </div>
       ))}
     </div>
