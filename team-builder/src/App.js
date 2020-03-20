@@ -4,16 +4,17 @@ import Form from "./components/form";
 import Member from "./components/member";
 
 function App() {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState([
+    {
+      id: Date.now(),
+      name: "Katherine",
+      email: "Kat@Kat.com",
+      position: "Full-Stack"
+    }
+  ]);
 
   const addNewMember = member => {
-    const newMember = {
-      id: Date.now(),
-      name: member.name,
-      email: member.email,
-      position: member.position
-    };
-    setMembers([...members, newMember]);
+    setMembers([...members, member]);
   };
 
   return (
@@ -21,7 +22,7 @@ function App() {
       <h1>Teammate List</h1>
       <h2>Add your name!</h2>
       <Form data={addNewMember} />
-      <Member data={members} />
+      <Member list={members} />
     </div>
   );
 }

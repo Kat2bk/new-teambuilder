@@ -3,7 +3,7 @@ import React from "react";
 export default function Members(props) {
   return (
     <div className="member-list">
-      {props.data.map(member => (
+      {props.list.map(member => (
         <div className="member" key={member.id}>
           <h2>Name: {member.name}</h2>
           <h2>Email: {member.email}</h2>

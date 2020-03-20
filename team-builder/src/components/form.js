@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function MemberForm(props) {
-  console.log("I am the props for form", props);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -9,7 +8,6 @@ export default function MemberForm(props) {
   });
 
   function handleChange(event) {
-    console.log(formState);
     setFormState({
       ...formState,
       [event.target.name]: event.target.value
@@ -17,7 +15,7 @@ export default function MemberForm(props) {
   }
 
   function Submit(event) {
-    event.PreventDefault();
+    event.preventDefault();
     props.data(formState);
     setFormState({ name: "", email: "", position: "" });
   }
